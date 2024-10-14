@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Сторінка Реєстрації</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<form id="registrationForm">
+		<div class="field">
+			<label for="accountName">Назва Облікового Запису:</label>
+			<input type="text" id="accountName" name="accountName" placeholder="Введіть назву" required>
+			<div class="hint">Виберіть унікальну назву облікового запису.</div>
+		</div>
+		<div class="field">
+			<label for="password">Пароль:</label>
+			<input type="password" id="password" name="password" placeholder="Введіть пароль" required>
+			<div class="hint">Використовуйте принаймні 8 символів, включаючи літери та цифри.</div>
+		</div>
+		<div class="field">
+			<label>Тип Користувача:</label>
+			<div class="user-type-buttons">
+				<button type="button" id="privateUserBtn" class="active">Приватний Користувач</button>
+				<button type="button" id="organizationBtn">Організація</button>
+			</div>
+			<input type="hidden" name="userType" id="userType" value="private">
+		</div>
+		<div id="privateFields">
+			<div class="field">
+				<label for="firstName">Ім'я:</label>
+				<input type="text" id="firstName" name="firstName" placeholder="Ваше ім'я" required>
+				<div class="hint">Введіть своє ім'я.</div>
+			</div>
+			<div class="field">
+				<label for="lastName">Прізвище:</label>
+				<input type="text" id="lastName" name="lastName" placeholder="Ваше прізвище" required>
+				<div class="hint">Введіть своє прізвище.</div>
+			</div>
+		</div>
+		<div id="organizationFields">
+			<div class="field">
+				<label for="orgName">Назва Організації:</label>
+				<input type="text" id="orgName" name="orgName" placeholder="Назва організації">
+				<div class="hint">Введіть назву організації.</div>
+			</div>
+			<div class="field">
+				<label for="address">Адреса:</label>
+				<input type="text" id="address" name="address" placeholder="Адреса організації">
+				<div class="hint">Введіть адресу організації.</div>
+			</div>
+		</div>
+		<button type="submit">Зареєструватися</button>
+	</form>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster|Nosifer&display=swap');
+
+body {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	background-color: #1a1a1a;
+	color: #f4f4f4;
+	margin: 50px;
+}
+
+form {
+	background: rgba(0, 0, 0, 0.8);
+	padding: 30px;
+	max-width: 500px;
+	margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.field {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+	color: #FF7518;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="radio"],
+select {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 2px solid #FF7518;
+	border-radius: 4px;
+	background-color: #333;
+	color: #f2f2f2;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+	color: #bbb;
+}
+
+.hint {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #333;
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 12px;
+	margin-top: 4px;
+	color: #FF7518;
+}
+
+input:hover+.hint,
+input:focus+.hint {
+	display: block;
+}
+
+button {
+	padding: 10px 15px;
+	background: #FF7518;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 4px;
+	font-size: 16px;
+	font-family: 'Cinzel', serif;
+	transition: background 0.3s, transform 0.3s;
+	position: relative;
+	overflow: hidden;
+}
+
+button::before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: rgba(255, 255, 255, 0.1);
+	transform: rotate(45deg);
+	transition: all 0.5s;
+}
+
+button:hover {
+	background: #E07B00;
+	transform: scale(1.05);
+}
+
+button:hover::before {
+	top: 100%;
+	left: 100%;
+}
+
+#organizationFields {
+	display: none;
+}
+
+.user-type-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.user-type-buttons button {
+	width: 48%;
+	background: #333;
+	border: 2px solid #FF7518;
+	color: #FF7518;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.user-type-buttons button.active {
+	background: #FF7518;
+	color: #fff;
+}
+
+.user-type-buttons button:hover {
+	background: #E07B00;
+	color: #fff;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://wallpaperaccess.com/download/4k-halloween-86406');
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.1;
+	pointer-events: none;
+}
